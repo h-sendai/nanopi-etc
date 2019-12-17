@@ -1,0 +1,23 @@
+--- /etc/ntp.conf.orig  2016-02-11 16:32:19.880000123 +0000
++++ /etc/ntp.conf       2016-02-11 16:32:57.990000142 +0000
+@@ -15,13 +15,15 @@
+ # Use servers from the NTP Pool Project. Approved by Ubuntu Technical Board
+ # on 2011-02-08 (LP: #104525). See http://www.pool.ntp.org/join.html for
+ # more information.
+-pool 0.ubuntu.pool.ntp.org iburst
+-pool 1.ubuntu.pool.ntp.org iburst
+-pool 2.ubuntu.pool.ntp.org iburst
+-pool 3.ubuntu.pool.ntp.org iburst
++#pool 0.ubuntu.pool.ntp.org iburst
++#pool 1.ubuntu.pool.ntp.org iburst
++#pool 2.ubuntu.pool.ntp.org iburst
++#pool 3.ubuntu.pool.ntp.org iburst
+
+ # Use Ubuntu's ntp server as a fallback.
+-pool ntp.ubuntu.com
++#pool ntp.ubuntu.com
++
++server 192.168.10.202 iburst
+
+ # Access control configuration; see /usr/share/doc/ntp-doc/html/accopt.html for
+ # details.  The web page <http://support.ntp.org/bin/view/Support/AccessRestrictions>
